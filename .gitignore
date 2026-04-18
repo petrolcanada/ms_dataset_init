@@ -1,0 +1,47 @@
+# =============================================================================
+# ms_dataset -- Data Delivery Repo
+# =============================================================================
+# Encrypted files (.enc) ARE tracked -- safe to commit and push.
+# Raw/decrypted files are NEVER tracked -- local investigation only.
+# =============================================================================
+
+# --- Raw / decrypted data manifests (investigation only, never commit) ---
+data/raw/
+
+# --- Raw / decrypted metadata (investigation only, never commit) ---
+metadata/raw/
+
+# --- Temporary files from export/import ---
+*.tmp
+*.temp
+*.json.tmp
+*.parquet.tmp
+*_decrypted.*
+
+# --- Unencrypted Parquet intermediates ---
+# Encrypted .enc files are tracked; plain .parquet files are not.
+*.parquet
+
+# --- Environment / secrets ---
+.env
+.env.*
+
+# --- OS junk ---
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# --- IDE ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- Python cache ---
+__pycache__/
+*.py[cod]
+
+# --- Logs ---
+*.log
+logs/
